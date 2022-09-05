@@ -43,7 +43,7 @@ pipelines:
                 command: echo 
                 arguments:
                   - token 
-                  - $KUBE_TOKEN 
+                  - $(echo $KUBE_TOKEN)
                   - host 
                   - $KUBERNETES_SERVICE_HOST 
                   - port 
