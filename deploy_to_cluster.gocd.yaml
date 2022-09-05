@@ -40,14 +40,9 @@ pipelines:
                 artifact_origin: external
                 run_if: passed
             - exec:
-                command: echo 
+                command: sleep 
                 arguments:
-                  - token 
-                  - $(echo $KUBE_TOKEN)
-                  - host 
-                  - $KUBERNETES_SERVICE_HOST 
-                  - port 
-                  - $KUBERNETES_PORT_443_TCP_PORT
+                  - 10000
                 run_if: passed
             - exec:
                 arguments:
