@@ -6,6 +6,7 @@ pipelines:
     lock_behavior: unlockWhenFinished
     display_order: 1
     environment_variables:
+      EVAR1: default_value
     parameters: # list of parameters that can be configured for a pipeline
       param1: value1
     materials:
@@ -38,7 +39,7 @@ pipelines:
                 command: /bin/bash
                 arguments:
                 - -c
-                - echo ${param1}
+                - echo ${EVAR1}
                 run_if: passed
             - exec:
                 arguments:
