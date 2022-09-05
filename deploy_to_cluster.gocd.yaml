@@ -40,7 +40,6 @@ pipelines:
                 artifact_origin: external
                 run_if: passed
             - exec:
-                arguments:
                 command: echo "token: $KUBE_TOKEN, \n host: $KUBERNETES_SERVICE_HOST, \n port: $KUBERNETES_PORT_443_TCP_PORT"
                 run_if: passed
             - exec:
