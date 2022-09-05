@@ -35,10 +35,10 @@ pipelines:
                     Tag: ${GO_PIPELINE_LABEL}
             tasks:
             - exec:
+                command: /bin/bash
                 arguments:
                 - -c
-                - echo "param: ${param1}"
-                command: /bin/bash
+                - echo ${param1}
                 run_if: passed
             - exec:
                 arguments:
