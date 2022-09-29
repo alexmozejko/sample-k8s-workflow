@@ -30,9 +30,9 @@ pipelines:
             #     job: build_image
             #     artifact_origin: external
             #     run_if: passed
-            - exec:
-                arguments:
-                - -c
-                - docker run $DOCKERHUB_USERNAME/bulletin-board:$GO_DEPENDENCY_LABEL_UPSTREAM npm test
-                command: /bin/bash
-                run_if: passed
+            # - exec:
+            #     arguments:
+            #     - -c
+            #     - docker run $DOCKERHUB_USERNAME/bulletin-board:$GO_DEPENDENCY_LABEL_UPSTREAM npm test
+            #     command: /bin/bash
+            #     run_if: passed
