@@ -5,8 +5,8 @@ pipelines:
     label_template: ${COUNT}
     lock_behavior: unlockWhenFinished
     display_order: 2
-    environment_variables:
-    materials:
+    # environment_variables:
+    # materials:
       # upstream:
       #   pipeline: build_and_publish_image
       #   stage: build_and_publish_image
