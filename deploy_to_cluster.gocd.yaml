@@ -7,10 +7,10 @@ pipelines:
     display_order: 3
     environment_variables:
     materials:
-      upstream:
-        pipeline: test_application
-        stage: test_app_image
-        name: upstream_pipeline
+      # upstream:
+      #   pipeline: test_application
+      #   stage: test_app_image
+      #   name: upstream_pipeline
       SourceCodeRepo:
         git: https://github.com/gocd-demo/node-bulletin-board.git
         shallow_clone: false

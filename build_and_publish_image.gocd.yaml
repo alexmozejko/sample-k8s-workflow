@@ -40,7 +40,23 @@ pipelines:
                 arguments:
                 - -c
                 - echo ${EVAR1}
+            - exec:
+                command: /bin/bash
+                arguments:
+                - -c
+                - if [ ${EVAR1} = "var" ] ; then echo "success" ; fi 
+            - exec:
+                command: /bin/bash
+                run_if: failed
+                arguments:
+                - -c
+                - echo "failed"
+            - exec:
+                command: /bin/bash
                 run_if: passed
+                arguments:
+                - -c
+                - echo "passed"
             # - exec:
             #     arguments:
             #     - -c

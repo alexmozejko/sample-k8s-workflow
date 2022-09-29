@@ -7,10 +7,10 @@ pipelines:
     display_order: 2
     environment_variables:
     materials:
-      upstream:
-        pipeline: build_and_publish_image
-        stage: build_and_publish_image
-        name: upstream
+      # upstream:
+      #   pipeline: build_and_publish_image
+      #   stage: build_and_publish_image
+      #   name: upstream
     stages:
     - test_app_image:
         fetch_materials: true
